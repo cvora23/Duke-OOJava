@@ -8,7 +8,7 @@ public class YoutubeLinkFinder {
 		
 		public void printYoutubeLinks(){
 			URLResource res = new URLResource(UrlLoc);
-			for (String line : res.words()) {
+			for (String line : res.lines()) {
 				//System.out.println(line);
 				printIfYoutubeLinks(line);
 			}

@@ -12,7 +12,7 @@ import edu.duke.*;
 
 import java.io.*;
 
-public class TagFinder {
+public class FindingOneGene {
 	
 	public String findProtein(String dna) {
 		String lowerCasedna = dna.toLowerCase();
@@ -62,7 +62,7 @@ public class TagFinder {
 	
 	
 	public static void main(String[] args) {
-		TagFinder tagFinder = new TagFinder();
+		FindingOneGene tagFinder = new FindingOneGene();
 		tagFinder.testing();
     }
 	
