@@ -128,10 +128,10 @@ public class AnalyzingBabyNames {
 			fileName = fileName.replaceAll("[^0-9]", "");
 			int year = Integer.parseInt(fileName);
 			int ret = getRank(year,name,gender);
-			if(ret != -1 && yearOfHighestRank == -1){
+			if((ret != -1) && (yearOfHighestRank == -1)){
 				highestRank = ret;
 				yearOfHighestRank = year;
-			}else if(ret <highestRank){
+			}else if((ret != -1) && (ret <highestRank)){
 				highestRank = ret;
 				yearOfHighestRank = year;
 			}
@@ -191,15 +191,23 @@ public class AnalyzingBabyNames {
 		//FileResource fr = new FileResource(createFileName(1905));
 		//totalBirths(fr);
 		
-		//System.out.println(getRank(1971,"Frank", "M"));
+		System.out.println(getRank(1960,"Emily", "F"));
+		System.out.println(getRank(1971,"Frank", "M"));
+
 		//System.out.println(getRank(2012,"Mason", "F"));
-		//System.out.println(getName(1982,450,"M"));
+		System.out.println(getName(1980,350,"F"));
+		System.out.println(getName(1982,450,"M"));
+
 		whatIsNameInYear("Susan",1972,2014,"F");
+		whatIsNameInYear("Owen",1974,2014,"M");
+
+		//System.out.println(yearOfHighestRank("Genevieve","F"));
 		//System.out.println(yearOfHighestRank("Mich","M"));
-		//System.out.println(getAverageRank("Susan","F"));
-		//System.out.println(getAverageRank("Robert","M"));
-		//System.out.println(getTotalBirthsRankedHigher(1990,"Emily","F"));
-		//System.out.println(getTotalBirthsRankedHigher(1990,"Drew","M"));
+
+		System.out.println(getAverageRank("Susan","F"));
+		System.out.println(getAverageRank("Robert","M"));
+		System.out.println(getTotalBirthsRankedHigher(1990,"Emily","F"));
+		System.out.println(getTotalBirthsRankedHigher(1990,"Drew","M"));
 
 	}
 	
